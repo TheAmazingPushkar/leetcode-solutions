@@ -146,10 +146,122 @@ int pattern15(int n)
         printf("\n");
     }
 }
+int pattern16(int n)
+{
+    char stChar = 'A';
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<=i;j++){
+            printf("%c",stChar);
+        }
+        stChar = stChar + 1;
+        printf("\n");
+    }
+}
+int pattern17(int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        
+        //space
+        for(int j=n;j>i;j--){
+            printf(" ");
+        }
+
+        //letters
+        char stChar = 'A';
+        int breakpoint = (2*i+1)/2;
+        for(int k=0;k<(2*i+1);k++){
+            printf("%c",stChar);
+            if(k<breakpoint){
+                stChar++;
+            }
+            else{
+                stChar--;
+            }
+        }
+
+        //space
+        for(int l=n;l>i;l--){
+            printf(" ");
+        }
+
+        //next line
+        printf("\n");
+
+    }
+}
+int pattern18(int n)
+{
+    for(int i=0;i<n;i++)
+    {
+         char stChar ='E';
+         stChar = stChar - i;
+        
+        for(int j=0;j<=i;j++){
+           
+            
+            printf("%c",stChar);
+            stChar++;
+        }
+
+        //next line
+        printf("\n");
+    }
+}
+int pattern19(int n)
+{
+   // top pattern
+    for(int i=0;i<n;i++)
+    {
+        //elements
+        for(int j=0;j<n-i;j++){
+            printf("*");
+        }
+        //space
+        for(int k=0;k<2*i;k++){
+            printf(" ");
+        }
+        
+
+        //element
+        for(int j=0;j<n-i;j++){
+            printf("*");
+        }
+
+        //newline
+        printf("\n");
+    }
+    //below pattern
+    int intSpace = 8;
+    for(int i=0;i<n;i++)
+    {
+        //elements
+        for(int j=0;j<=i;j++){
+            printf("*");
+        }
+        //space
+        for(int k=0;k<intSpace;k++){
+            printf(" ");
+        }
+        intSpace = intSpace -2;
+        
+
+        //element
+        for(int j=0;j<=i;j++){
+            printf("*");
+        }
+
+        //newline
+        printf("\n");
+}
+}
+
+
 
 void main()
 
 {
-    pattern15(5);
+    pattern19(5);
 
 }
