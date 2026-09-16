@@ -1,0 +1,155 @@
+#include <stdio.h>
+
+int pattern7(int n)
+
+{
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n-i;j++){
+            printf(" ");
+        }
+    for(int k=0;k<2*i+1;k++){
+        printf("*");
+    }
+    printf("\n");
+    }
+}
+int pattern8(int n)
+{
+    for(int i=0;i<n;i++){
+        //space
+        for(int k=0;k<i;k++){
+            printf(" ");
+        }
+        //stars
+        for(int j=0;j<(2*n-(2*i+1));j++){
+            printf("*");
+        }
+        //space
+        for(int k=0;k<i;k++){
+            printf(" ");
+        }
+
+        printf("\n");
+    }
+}
+int pattern9(int n)
+{
+    //just combine pattern 7 and 8 ig
+}
+int pattern10(int n)
+{
+    for(int i=0;i<n;i++){
+        if(n<((n+1)/2))
+        {
+            for(int j=0;j<=i;j++)
+            {
+                printf("*");
+            }
+            printf("\n");
+        }
+        else
+        {
+            for(int k=0;k<n-i;k++)
+            {
+                printf("*");
+            }
+            printf("\n");
+        }
+    }
+}
+int pattern11(int n)
+{
+    int start = 1;
+    for(int i=0;i<n;i++){
+        if(i%2 == 0)// even row
+        {
+            start = 1;
+        }
+        else{
+            //odd row
+            start =0;
+        }
+        for(int j=0;j<=i;j++){
+            printf("%d",start);
+            start = 1 - start; //flipping of zero, dam so simple, i was just overthinking
+            
+        }
+        printf("\n");
+    }
+}
+int pattern12(int n)
+{
+    int fnSpace =2*(n-1);// first space value, we will decrement it by 2 after each row
+    
+    for(int i=1;i<=n;i++)
+    {
+        //numbers
+        for(int j=1;j<=i;j++){
+            printf("%d",j);
+        }
+        //space
+        
+        for(int j=0;j<fnSpace;j++){
+            printf(" ");
+        }
+        fnSpace = fnSpace -2;
+
+        
+
+        //numbers
+        for(int k=i;k>=1;k--){
+            printf("%d",k);
+        }
+
+        //new line
+        printf("\n");
+    }
+}
+int pattern13(int n)
+{
+    int stNum = 1;
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=i;j++){
+            printf("%d",stNum);
+            printf(" ");
+            stNum=stNum+1;
+        }
+        
+        printf("\n");
+
+
+    }
+}
+int pattern14(int n)
+{
+    
+    for(int i=0;i<n;i++)
+    {
+        char stChar = 'A';
+        for(int j=0;j<=i;j++){
+            printf("%c",stChar);
+            stChar = stChar +1;
+        }
+        printf("\n");
+    }
+}
+int pattern15(int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        char stChar = 'A';
+        for(int j=n;j>i;j--){
+            printf("%c",stChar);
+            stChar = stChar + 1;
+        }
+        printf("\n");
+    }
+}
+
+void main()
+
+{
+    pattern15(5);
+
+}
