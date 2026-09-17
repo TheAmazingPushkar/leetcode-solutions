@@ -256,12 +256,105 @@ int pattern19(int n)
         printf("\n");
 }
 }
+int pattern20(int n)
+{
+    //top part
+    for(int i=0;i<n;i++)
+    {
 
+    //stars
+    for(int j=0;j<=i;j++){
+        printf("*");
+    }
+
+    //space
+    int space = 8;
+    space = space-2*i;
+    for(int k=0;k<space;k++){
+        printf(" ");
+    }
+    
+
+    //stars
+    for(int j=0;j<=i;j++){
+        printf("*");
+    }
+    //space
+    printf("\n");
+
+    }
+    //lower part
+    for(int i=0;i<n-1;i++)
+    {
+        //stars
+        for(int j=n-1;j>i;j--){
+            printf("*");
+        }
+
+        //space
+        int space=2;
+        space =space+2*i;
+        for(int k=0;k<space;k++){
+            printf(" ");
+        }
+
+        //stars
+        for(int j=n-1;j>i;j--){
+            printf("*");
+        }
+
+        //nextline
+        printf("\n");
+    }
+    
+
+}
+int pattern21(int n)
+{
+    //to print a square 
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++){
+          if(i==0 || j==0 || i==n-1 || j==n-1){
+            printf("*");
+          }
+          else{
+            printf(" ");
+          }
+        
+        }
+        //next line
+        printf("\n");
+    }
+}
+int pattern22(int n)
+{
+    //logic is wrong 
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++){
+            if(i==0||j==0||j==n-1||i==n-1){
+                printf("4");
+            }
+            if(i==1||j==1||j==n-2||i==n-2){
+                printf("3");
+            }
+            if(i==2||j==2||j==n-3||i==n-3){
+                printf("2");
+            }
+            else{
+                printf(" ");
+            }
+        }
+        //space
+        printf("\n");
+    }
+}
 
 
 void main()
 
 {
-    pattern19(5);
+    pattern22(7);
 
 }
