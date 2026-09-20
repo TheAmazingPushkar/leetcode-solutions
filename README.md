@@ -25,6 +25,6 @@ leetcode-solutions/
 ├── solutions/
 │   ├── 0001-two-sum/
 │   │   ├── README.md        # Problem description & detailed breakdown
-│   │   └── solution.py      # Annotated source code
+│   │   └── solution.cpp      # Annotated source code
 │   └── ...
 └── README.md
