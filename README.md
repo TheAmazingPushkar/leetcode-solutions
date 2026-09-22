@@ -12,6 +12,7 @@ A structured collection of well-explained, efficient solutions to LeetCode probl
 ## 🎯 Repository Overview
 
 This repository serves as a personal log of my problem-solving journey on LeetCode. Each solution aims to be optimal in terms of **Time and Space Complexity** while prioritizing readable, well-commented code.
+It also contains my daily solving code, in respect to dsa
 
 ---
 
